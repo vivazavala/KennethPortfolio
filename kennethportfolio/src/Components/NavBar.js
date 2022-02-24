@@ -6,6 +6,7 @@ import { Navbar, Nav, Container, Row, Col, Brand} from 'react-bootstrap';
 import cvicon from "../images/cvicon.png";
 import Pdf from "../documents/ZavalaKennethResume2022pdfWeb.pdf";
 import {ViewSize} from "../App.js";
+import {motion} from "framer-motion";
 
 var navLinkStyle ={
     fontSize: '20px'   
@@ -21,11 +22,9 @@ var iconStyle ={
     paddingRight: "5px"
 }
 var phoneIconStyle={
-    paddingRight: "5px",
+    paddingRight: "20px",
     justifyContent: 'center',
-    display: 'flex',
-    width: '50',
-    height: '40'
+    display: 'flex'
 }
 var phoneNav ={
     fontSize: '15px',
@@ -42,22 +41,31 @@ var phoneLinkStyle={
 
 function NavBar() {
        const PageSize = useContext(ViewSize);
-    
+        const variants={
+            visible: {opacity:1},
+            hidden:{opacity: 0},
+        }
 	return (
+        <motion.div 
+initial="hidden" 
+animate="visible"
+variants={variants}
+transition={{ease: "easeInOut", duration: 1}}
+>
         <div>
             <Navbar collapseOnSelect expand="lg" fluid style={navBarCustomCol} variant="dark">
             <Container fluid>
            
                 <Nav className='ms-auto'>
-                    <Navbar.Brand href="/Home"style ={PageSize.width >= 700 ? navLinkStyle : phoneNav}>KENNETH ZAVALA</Navbar.Brand>
+                    <Navbar.Brand href="/"style ={PageSize.width >= 700 ? navLinkStyle : phoneNav}>KENNETH ZAVALA</Navbar.Brand>
                 </Nav>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">   
 
                 <Nav className="m-auto" style= {navLinkStyle}>                  
-                    <Nav.Link href="#About" style={PageSize.width >= 991 ? linkStyle : phoneLinkStyle}>About</Nav.Link>
-                    <Nav.Link href="#Projects" style={PageSize.width >= 991 ? linkStyle : phoneLinkStyle}>Projects</Nav.Link>
-                    <Nav.Link href="#Contact" style={PageSize.width >= 991 ? linkStyle : phoneLinkStyle}>Contact</Nav.Link>                  
+                    <Nav.Link href="/About" style={PageSize.width >= 991 ? linkStyle : phoneLinkStyle}>About</Nav.Link>
+                    <Nav.Link href="/Portfolio" style={PageSize.width >= 991 ? linkStyle : phoneLinkStyle}>Portfolio</Nav.Link>
+                    <Nav.Link href="/Contact" style={PageSize.width >= 991 ? linkStyle : phoneLinkStyle}>Contact</Nav.Link>                  
                 </Nav>
            
                 <Nav className={PageSize.width >= 991 ? "m1-auto" : "flex-row justify-content-center"}>     
@@ -72,6 +80,7 @@ function NavBar() {
             </Container>
             </Navbar>
 		</div>
+        </motion.div>
 		);
 }
 
