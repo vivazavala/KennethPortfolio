@@ -1,0 +1,50 @@
+.li{
+    color: black;
+    font-size: 5rem;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none; 
+    padding-top: 5%;
+}
+.phoneli{
+    color: black;
+    font-size: 2rem;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none; 
+    padding-top: 5%;
+}
+.typeWriterText{
+    color: black;
+    font-size: 5rem;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;   
+}
+.phonetypeWriterText{
+    color: black;
+    font-size: 2rem;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;   
+}
+.button{
+    color: rgb(78, 188, 231);
+    display: flex;
+    border-radius: 8%;
+    background-color: white;
+    border:rgb(78, 188, 231) solid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

@@ -16,6 +16,7 @@
     "react-scripts": "4.0.2",
     "react-social-icons": "^5.10.0",
     "social-media-icons-react": "^1.1.10",
+    "typewriter-effect": "^2.18.2",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
