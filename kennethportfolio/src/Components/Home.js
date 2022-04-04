@@ -14,18 +14,17 @@ function Home() {
 
   }
   return (
-    <motion.div 
+    <motion.div style ={{background: "white"}}
     initial={{scaleY: 0}} 
     animate={{scaleY:1}} 
     exit={{scaleY:0}}
     transition={{duration: .5, delay: 1}}
     >
     
-    <Container fluid>
-      <ul >
-      <motion.li className={PageSize.width >= 500 ? "li" : "phoneli"} whileHover={{color: '#c227e6'}}>
-      Hi, <br></br>
-      I'm Kenneth, 
+    <Container style={{padding: "0px",}} fluid>
+      <ul style ={{padding: "10px"}}>
+      <motion.li className={PageSize.width >= 500 ? "li" : "phoneli"} whileHover={{scale: 1.1}}>
+      Hi, I'm Kenneth 
       </motion.li>
       <motion.li className ={PageSize.width >= 500 ? "typeWriterText" : "phonetypeWriterText"} whileHover={{color:'#c227e6'}}>
          <TypeWriter options={{
@@ -35,9 +34,10 @@ function Home() {
           delay: 65, deleteSpeed: 60, pauseFor: 1000
            }} />
       </motion.li>
-      <motion.button className='button' whileTap={{scale: .5}} whileHover={{scale: 1.1}}>Contact Me!</motion.button>
-      <motion.button className='button' whileTap={{scale: .5}} whileHover={{scale: 1.1}}>View My Work!</motion.button>
-      
+      <div style ={{textAlign: "center"}}>
+      <motion.button className= {PageSize.width >= 500 ? "button" : "phoneButton"}whileTap={{scale: .5}} whileHover={{scale: 1.1}}>Contact Me!</motion.button>
+      <motion.button className= {PageSize.width >= 500 ? "button" : "phoneButton"} whileTap={{scale: .5}} whileHover={{scale: 1.1}}>View My Work!</motion.button>
+      </div>
       </ul>
     </Container>
     </motion.div>

@@ -10,7 +10,7 @@ import {ViewSize} from "../App.js";
 import {motion} from "framer-motion";
 
 var navLinkStyle ={
-    fontSize: '20px'
+    fontSize: '20px',
 }
 var hamburgerLinkStyle ={
     width: '15%'
@@ -19,21 +19,18 @@ var navBarCustomCol = {
     backgroundColor: '#000000'
 }
 var linkStyle ={
-    paddingLeft: "60px",
-    paddingRight: "60px"
+    paddingLeft: "25px",
+    paddingRight: "25px",
+    marginLeft: "6rem"
 }
 var iconStyle ={
     paddingRight: "5px"
 }
 var phoneIconStyle={
-    paddingLeft:'13px',
-    paddingRight: "13px",
+    marginLeft: "2rem",
+    padding: "5px",
     justifyContent: 'center',
     display: 'flex'
-}
-var phoneNav ={
-    fontSize: '15px',
-    transition: '0.3s all ease-out'
 }
 var phoneLinkStyle={  
     transition: '0.2s all ease-out',
@@ -78,7 +75,7 @@ transition={{ease: "easeInOut", duration: 1}}
 
                 <Nav className='ms-auto'>
                 <motion.div whileHover={{scale: 1.1}}>
-                    <Navbar.Brand href="/" title ="Home" style ={PageSize.width >= 700 ? navLinkStyle : phoneNav}><img src = {kzlogo} style ={PageSize.width >= 500 ? logoStyle : phoneLogoStyle}/></Navbar.Brand>
+                    <Navbar.Brand href="/" title ="Home"><img src = {kzlogo} style ={PageSize.width >= 500 ? logoStyle : phoneLogoStyle}/></Navbar.Brand>
                 </motion.div>   
                 </Nav>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
