@@ -1,0 +1,91 @@
+.scrollArrow {
+    position: fixed; 
+    width: 3rem;
+    align-items: center;
+    height: 20px;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+    animation: fadeIn 0.3s;
+    transition: opacity 0.4s;
+    opacity: 0.5;
+    color: #0DF1BA; 
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .scrollArrow:hover{
+    opacity: 1;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  .tagStyling{
+    font-size: 20px;
+    color: #0DF1BA; 
+    font-style: white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Monoton', cursive;
+  }
+  .navLinkStyle{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+  }
+  .phoneLinkStyle{
+      transition: 0.2s all ease-out;
+      display: flex;
+      font-size: 18px;
+      justify-content: center;
+      padding: 10px;
+  }
+  .intro{
+    display: flex;
+    justify-content: center;
+    width:fit-content;
+
+  }
+  .userPh{
+    width:fit-content;
+    display: flex; 
+    justify-content: center;
+    border-radius: 100%;
+  }
+  
+  .aboutMe{
+    padding:1rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;    
+    color: white;
+    font-size: 25px;
+    }
+    .skillsContainer{
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      padding: 10px;
+      margin-top: 3rem;
+      justify-content: center;
+    }
+    .skill{
+      border: #0DF1BA solid 1px;
+      border-radius: 20px;
+      font-size: 17px;
+      font-weight: 1000;
+      background-color: transparent;
+      padding: 20px;
+      margin: 5px;
+      color: white;
+      text-align: center;
+      width: fit-content;
+    }
