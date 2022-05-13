@@ -47,19 +47,18 @@
       justify-content: center;
       padding: 10px;
   }
+  
+  /* About */
   .intro{
     display: flex;
     justify-content: center;
-    width:fit-content;
-
   }
   .userPh{
-    width:fit-content;
     display: flex; 
-    justify-content: center;
     border-radius: 100%;
+    width: fit-content;
+    height:fit-content;
   }
-  
   .aboutMe{
     padding:1rem;
     justify-content: center;
@@ -69,23 +68,119 @@
     color: white;
     font-size: 25px;
     }
+    @media screen and (max-width: 450px) {
+      .aboutMe{
+        padding: 5px;
+        font-size: 15px;
+      }
+    }
     .skillsContainer{
       display: flex;
-      flex-direction: row;
-      width: fit-content;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
       padding: 10px;
       margin-top: 3rem;
-      justify-content: center;
+      flex-wrap: wrap;
     }
     .skill{
-      border: #0DF1BA solid 1px;
+      border: #0DF1BA solid 2px;
       border-radius: 20px;
       font-size: 17px;
       font-weight: 1000;
       background-color: transparent;
-      padding: 20px;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
       margin: 5px;
       color: white;
       text-align: center;
       width: fit-content;
+      height: fit-content;
+      display:flex;
     }
+    @media screen and (max-width: 520px) {
+      .skill{
+        font-size: 12px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 2px;
+      }
+    }
+    .careerBox{
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      width: 80%;
+      justify-content: center;
+    }
+    .careerBoxHeader{
+      display: flex;
+      align-items: center;
+      color: #0DF1BA;
+      font-weight: 600;
+      width: 50%;
+      margin-left:  1rem;
+      font-family: 'Monoton', cursive;
+      padding: 10px;
+      margin-bottom: 1rem;
+    }
+    .careerBoxHeader::after{
+        content: '';
+        flex: 1;
+        margin-left: 1rem;
+        height: 2px;
+        background-color: white;
+    }
+    .roleColumn{
+      color: white;
+      font-size: 17px;
+      font-weight: 1000;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .roleDesc{
+      padding: 10px 5px;
+      margin: 0;
+      color: white;
+     }
+     .roleDiv{
+       text-align: start;  
+     }
+     .roleDiv p{
+       color: #0DF1BA;
+       font-weight: 500;
+     }
+     .roleDiv ul{
+       list-style-type: none;
+       font-weight: 500;
+     }
+     .roleDiv ul li::before{
+       content: "\2023";
+       font-weight: bold;
+       font-size: 1.5em;
+       color: #0DF1BA;
+       display: inline-block;
+       width: 1em;
+       margin-left: -1em;
+     }
+
+    .nav.nav-pills .nav-link.active {
+      background-color: transparent;
+      border-bottom: #0DF1BA solid 2px;
+      transition: ease-in-out .25s;
+      border-radius: 0%;    
+  }
+  .nav .nav-link:hover{
+      transform: scale(1.1);
+      transition: ease-in-out .2s;
+      border-bottom: white solid 2px;
+      border-radius: 0%;
+    }
+
+ 
