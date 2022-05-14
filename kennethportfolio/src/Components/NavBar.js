@@ -79,7 +79,7 @@ transition={{ease: "easeInOut", duration: 1}}
 
                 <Nav className='ms-auto'>
                 <motion.div whileHover={{scale: 1.1}}>
-                    <Navbar.Brand href="/" title ="Home"><p className ="tagStyling">{tagString}</p></Navbar.Brand>
+                    <Navbar.Brand href="/" title ="Home"><p style ={{fontSize: PageSize.width >350 ? "20px" : "15px"}}className ="tagStyling">{tagString}</p></Navbar.Brand>
                 </motion.div>   
                 </Nav>
 

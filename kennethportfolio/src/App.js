@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, useLocation} from "react-router
 import NavBar from "./Components/NavBar";
 import About from "./Components/About";
 import Home from "./Components/Home";
+import Footer from "./Components/Footer";
 import Portfolio from "./Components/Portfolio";
 import Contact from "./Components/Contact";
 import ScrollUpButton from './Components/ScrollUpButton';
@@ -13,7 +14,6 @@ import {Container} from 'react-bootstrap';
 import {AnimatePresence, motion} from "framer-motion";
 import "./Components/Home.css"
 import "./App.css";
-import {} from 'react-icons/fa';
 
 
 export const ViewSize = React.createContext();
@@ -52,6 +52,7 @@ function App() {
               <Route path="/Contact" component={Contact}/>   
               </Switch>
             <ScrollUpButton/>
+            <Footer/>
             {/* <p style ={size.height > 600 ? closeTag : smallCloseTag}className='tagStyling'>{closeString}</p> */}
           </div> 
     

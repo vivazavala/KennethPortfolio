@@ -1,5 +1,24 @@
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: black;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #0DF1BA;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #079574;
+}
+::-webkit-scrollbar-corner{
+  background-color: black;
+}
+/*  scrollarrow */
 .scrollArrow {
-    position: fixed; 
+  position: fixed; 
     width: 3rem;
     align-items: center;
     height: 20px;
@@ -13,17 +32,69 @@
     bottom: 20px;
     left: 20px;
   }
-  
   .scrollArrow:hover{
     opacity: 1;
   }
-
+  
   @keyframes fadeIn {
     0% {
       opacity: 0;
     }
     100% {
       opacity: 0.5;
+    }
+  } 
+  /*          footer */
+  .footerCustom{
+    background-color: transparent;
+    width: 100%;
+    padding: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: auto;
+  }
+  .footerCustomP{
+    color:#0DF1BA;
+    align-items: center;
+    margin: 0;
+    padding: 5px;
+  }
+  .footerCustomDiv1{
+    display: flex;
+    width: 55%;
+    justify-content: end;
+  }
+  @media screen and (max-width: 440px) {
+    .footerCustomDiv1{
+      justify-content: center;
+      width: 100%;
+    }
+  }
+  .footerCustomDiv2{
+    display: flex;
+    width: 45%;
+    justify-content: end;
+  }
+  @media screen and (max-width: 440px) {
+    .footerCustomDiv2{
+      display: none;
+    }
+  }
+  
+  .footerCustom h4{
+    font-family: 'Monoton', cursive;
+    color:#0DF1BA;
+    align-items: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 645px) {
+    .footerCustom h4{
+      font-size: 15px;
     }
   }
 
@@ -35,6 +106,7 @@
     justify-content: center;
     font-family: 'Monoton', cursive;
   }
+  /* Navbar css ***********/
   .navLinkStyle{
     display: flex;
     padding: 5px;
@@ -74,6 +146,7 @@
         font-size: 15px;
       }
     }
+    /******** Skills section */
     .skillsContainer{
       display: flex;
       justify-content: center;
@@ -108,6 +181,7 @@
         margin: 2px;
       }
     }
+    /*career section************/
     .careerBox{
       padding: 10px;
       display: flex;
@@ -182,5 +256,57 @@
       border-bottom: white solid 2px;
       border-radius: 0%;
     }
+
+    /******** Contact page***/
+.connectDiv{
+  width: 60%;
+  display: flex; 
+  justify-content: center; 
+  flex-direction: column;
+   text-align: center;
+    margin-top: 4rem; 
+  padding: 10px;
+}
+@media screen and (max-width: 400px) {
+  .connectDiv{
+    margin-top: 2rem;
+    width: 80%
+  }
+}
+.textDiv{
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 400px) {
+  .textDiv{
+    font-size: 14px;
+  }
+}
+.connectIcons{
+  height: 5rem;
+  padding: 10px 5px;
+  margin: 2rem .5rem;
+  color:#0DF1BA;
+}
+.connectIcons:hover{
+  color:#079574;
+  transform: scale(1.1);
+}
+@media screen and (max-width: 400px) {
+  .connectIcons{
+    height: 3rem;
+    margin: 2rem .2rem;
+    padding: 5px;
+  }
+}
+  
+
 
  

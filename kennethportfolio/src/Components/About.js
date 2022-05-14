@@ -66,8 +66,8 @@ const roleStyle={
     variants={variants}
     transition={{ease: "easeInOut", duration: 1.5}}>  
 
-    <img src={userPhoto} className = "userPh" style={{width: PageSize.width > 605 ? "fit-content" : PageSize.width,
-height: PageSize.width > 600 ? "550px" : PageSize.width}}/>
+    <img src={userPhoto} className = "userPh" style={{width: PageSize.width > 605 ? "fit-content" : PageSize.width -15,
+height: PageSize.width > 600 ? "550px" : PageSize.width -25}}/>
     </motion.div>
     </Col>
     <Col style ={{padding: "0px", display:"flex", justifyContent: "center"}}>

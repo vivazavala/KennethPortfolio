@@ -28,9 +28,7 @@ function ScrollUpButton() {
     },);
 
   return (
-
     <FaArrowCircleUp size ="xl" className="scrollArrow" style={{height: 40, display: showScroll ? 'flex' : 'none'}} onClick={scrollToTop}/>
-    
   );
 }
 

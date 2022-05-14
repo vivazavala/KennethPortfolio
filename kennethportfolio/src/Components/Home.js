@@ -4,28 +4,31 @@ import {motion, useSpring} from "framer-motion";
 import './Home.css';
 import TypeWriter from 'typewriter-effect';
 import {ViewSize} from "../App.js";
+import { Link } from 'react-router-dom';
 
 
 
 
 function Home() {
   const PageSize = useContext(ViewSize);
- 
+  const variants = {
+    visible: {opacity:1},
+    hidden:{opacity: 0},
+}
   return (
     
     <motion.div fluid 
-    initial={{scaleY: 0}} 
-    animate={{scaleY:1}} 
-    exit={{scaleY:0}}
-    transition={{duration: .5, delay: 1}}
+    initial="hidden" 
+    animate="visible"
+    variants={variants}
+    transition={{ease: "easeInOut", duration: 2}}
     >
     <Container style={{padding: "0px", margin: "0px"}} fluid>
       <ul style ={{padding: "10px", paddingBottom: "0px"}}>
       <motion.li className={PageSize.width >= 500 ? "li" : "phoneli"}>
-      <motion.div style ={{textAlign: "center", alignItems:"center"}}whileHover={{scale: 1.1}}>Hi, I'm <b style ={{color: "#0DF1BA", fontFamily: "'Fredoka One', cursive",
-fontFamily: "'Montserrat', sans-serif"}}>Kenneth.</b> </motion.div> 
+      <motion.div style ={{textAlign: "center", alignItems:"center", fontWeight: "500"}}whileHover={{scale: 1.1}}>Hi, I'm <b style ={{color: "#0DF1BA", fontFamily: "'Montserrat', sans-serif"}}>Kenneth.</b> </motion.div> 
       </motion.li>
-      <motion.li className ={PageSize.width >= 500 ? "typeWriterText" : "phonetypeWriterText"} whileHover={{color:'#0DF1BA'}}>
+      <motion.li className ="typeWriterText" whileHover={{color:'#0DF1BA'}}>
          <TypeWriter options={{
           strings: ['Software Engineer', 'Full-Stack Engineer'],
           autoStart: true,
@@ -34,8 +37,8 @@ fontFamily: "'Montserrat', sans-serif"}}>Kenneth.</b> </motion.div>
            }} />
       </motion.li>
       <div style ={{textAlign: "center"}}>
-      <motion.button href ="/Contact"className= {PageSize.width >= 500 ? "button" : "phoneButton"}whileTap={{scale: .5}} whileHover={{scale: 1.1}}>Contact Me!</motion.button>
-      <motion.button href ="/Portfolio" className= {PageSize.width >= 500 ? "button" : "phoneButton"} whileTap={{scale: .5}} whileHover={{scale: 1.1}}>View My Work!</motion.button>
+        <Link to="/Contact" className= "button">Contact Me!</Link>
+        <Link to="/Portfolio" className= "button">View My Work!</Link>
       </div>
       </ul>
     </Container>
