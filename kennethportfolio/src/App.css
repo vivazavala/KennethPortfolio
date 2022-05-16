@@ -306,7 +306,47 @@
     padding: 5px;
   }
 }
-  
+/******************* Portfolio*******/
+.cardBox{
+  width: 100%;
+  height:fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.card{
+  width:fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 5px 5px;
+  margin: 10px 10px;
+  border: #0DF1BA solid 2px;
+  justify-content: center;
+  background-color: rgb(21, 20, 20);
+}
+.card:hover{
+transform: scale(1.05);
+transition: ease-in-out .2s;
+opacity: .5;
+}
+.cardHeader{
+  width: 16rem;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 5px 5px;
+  flex-wrap: wrap;
+  color: white;
+  margin-bottom: 0px;
+}
 
 
  

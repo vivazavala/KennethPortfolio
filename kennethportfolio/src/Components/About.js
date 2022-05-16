@@ -15,7 +15,7 @@ function About() {
     }
     const skills =["Java", "React", "JavaScript", "HTML", "CSS", "Node.js", "Postgres"
     , "MongoDB", "SQL", "AWS", "Full Stack Development", "Object Oriented Programming",
-    "Git", "GitHub", "Jenkins Pipelines", "Flask", "Docker"
+    "Git", "GitHub", "Jenkins Pipelines"
 ];
 
 const introRowStyle={
