@@ -6,6 +6,11 @@ import {Link} from 'react-router-dom';
 import {FaGithub, FaLinkedin, FaInstagram} from 'react-icons/fa'
 
 function Contact() {
+
+  const variants = {
+    visible: {opacity:1},
+    hidden:{opacity: 0},
+}
   const PageSize = useContext(ViewSize);
   
   function onEmailClick(){
@@ -13,7 +18,12 @@ function Contact() {
     }
 
   return (
-    <motion.div style ={{display: "flex", justifyContent:"center", width: "100%", margin: "0", padding: "0"}}>
+    <motion.div style ={{display: "flex", justifyContent:"center", width: "100%", margin: "0", padding: "0"}}
+    initial="hidden" 
+    animate="visible"
+    variants={variants}
+    transition={{ease: "easeInOut", duration: 1.5}}
+    >
     <motion.div className='connectDiv'>
         <h1 style ={{fontFamily: "'Monoton', cursive", fontWeight: "800",fontSize: PageSize.width >= 400 ? "3rem":"2rem",color: "#0DF1BA"}}>Let's Connect?</h1>
         <p className='textDiv'>Thank you for visiting my webpage! What's the next step? I am always open to a conversation. 

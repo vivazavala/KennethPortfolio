@@ -4,7 +4,6 @@ import { React, useState, useEffect, useContext} from "react";
 import {SocialMediaIconsReact} from 'social-media-icons-react';
 import { Navbar, Nav, Container, Row, Col} from 'react-bootstrap';
 import cvicon from "../images/cvicon.png";
-import kzlogo from "../images/KZ.png";
 import Pdf from "../documents/ZavalaKennethResume2022pdfWeb.pdf";
 import {ViewSize} from "../App.js";
 import {motion} from "framer-motion";

@@ -6,10 +6,20 @@ import phoneInsurance from '../images/phoneInsuranceCalc.png';
 import {ViewSize} from "../App.js";
 import {Link} from 'react-router-dom';
 function Portfolio() {
-
+  
+  const variants = {
+    visible: {opacity:1},
+    hidden:{opacity: 0},
+}
   const PageSize = useContext(ViewSize);
+  
   return (
-    <motion.div style ={{display: "flex", justifyContent:"center", width: "100%", margin: "0", padding: "0", flexDirection: "column", textAlign: "center"}}>
+    <motion.div style ={{display: "flex", justifyContent:"center", width: "100%", margin: "0", padding: "0", flexDirection: "column", textAlign: "center"}}
+    initial="hidden" 
+    animate="visible"
+    variants={variants}
+    transition={{ease: "easeInOut", duration: 1.5}}
+    >
       <h1 style ={{fontFamily: "'Monoton', cursive", fontSize: PageSize.width >= 500 ? "4rem":"2rem", color: "#0DF1BA", marginTop: PageSize.width >450 ? "4rem": "2rem"}}>Welcome to my portfolio!</h1>
       <p style ={{color: "white", fontWeight: "800", marginBottom: ".5rem" }}>This section is continously being updated. Please be on the lookout for more.</p>
       <p style ={{color: "white", fontWeight: "500"}}>Click any card to view the source code or hosted site!</p>
